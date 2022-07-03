@@ -11,28 +11,23 @@ function App() {
   const [offhand, setOffhand] = useState("");
 
   useEffect(() => {
-    // random between 1 and 2
     const random = Math.floor(Math.random() * 2) + 1;
     let weapon = "";
     let offhandItem = "";
 
     if (random === 1) {
       weapon = randomize("oneHandedWeapon");
-      offhandItem = randomize("offhands");
+      offhandItem = randomize("offhand");
     } else {
       weapon = randomize("twoHandedWeapon");
     }
 
-    const armor = randomize("armor");
-    const helmet = randomize("helmet");
-    const boot = randomize("boots");
-    const cape = randomize("capes");
     setWeapons(weapon);
-    setChest(armor);
-    setHelm(helmet);
-    setBoots(boot);
-    setCape(cape);
     setOffhand(offhandItem);
+    setChest(randomize("armor"));
+    setHelm(randomize("helmet"));
+    setBoots(randomize("boot"));
+    setCape(randomize("cape"));
   }, [random]);
 
   return (

@@ -5,7 +5,7 @@ import { armors } from "../models/armors";
 import { helmets } from "../models/helmets";
 import { oneHandedWeapons, twoHandedWeapons } from "../models/weapons";
 
-export default function randomize(item?: string): string {
+export default function randomize(item: string): string {
   const itemQuality = Math.floor(Math.random() * 6);
   const itemLevelRandom = Math.floor(Math.random() * 4);
   const itemLevel = itemLevelRandom === 0 ? "" : `@${itemLevelRandom}`;
@@ -21,13 +21,13 @@ export default function randomize(item?: string): string {
       itemType =
         oneHandedWeapons[Math.floor(Math.random() * oneHandedWeapons.length)];
       break;
-    case "offhands":
+    case "offhand":
       itemType = offhands[Math.floor(Math.random() * offhands.length)];
       break;
-    case "capes":
+    case "cape":
       itemType = capes[Math.floor(Math.random() * capes.length)];
       break;
-    case "boots":
+    case "boot":
       itemType = boots[Math.floor(Math.random() * boots.length)];
       break;
     case "armor":
