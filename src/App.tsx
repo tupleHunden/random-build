@@ -44,35 +44,25 @@ function App() {
       <div className="pt-12 flex flex-row">
         <div className="h-32 w-32"></div>
         <div className="h-32 w-32">
-          <img src={helm} alt="Albion Leather Set" width="100%" height="100%" />
+          <img src={helm} alt="Helmet Armor" width="100%" height="100%" />
         </div>
         <div className="h-32 w-32">
-          <img src={cape} alt="Albion Leather Set" width="100%" height="100%" />
+          <img src={cape} alt="Cape" width="100%" height="100%" />
         </div>
       </div>
 
       <div className="flex flex-row">
         <div className="h-32 w-32">
-          <img
-            src={weapons}
-            alt="Albion Leather Set"
-            width="100%"
-            height="100%"
-          />
+          <img src={weapons} alt="Weapon" width="100%" height="100%" />
         </div>
         <div className="h-32 w-32">
-          <img
-            src={chest}
-            alt="Albion Leather Set"
-            width="100%"
-            height="100%"
-          />
+          <img src={chest} alt="Chest Armor" width="100%" height="100%" />
         </div>
         <div className="h-32 w-32">
           <img
             className={offhand == "" ? "opacity-70" : ""}
             src={offhand == "" ? weapons : offhand}
-            alt="Albion Leather Set"
+            alt="Offhand Weapon"
             width="100%"
             height="100%"
           />
@@ -81,12 +71,7 @@ function App() {
       <div className="flex flex-row">
         <div className="h-32 w-32"></div>
         <div className="h-32 w-32">
-          <img
-            src={boots}
-            alt="Albion Leather Set"
-            width="100%"
-            height="100%"
-          />
+          <img src={boots} alt="Boot Armor" width="100%" height="100%" />
         </div>
         <div className="h-32 w-32"></div>
       </div>
