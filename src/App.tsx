@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Item from "../components/Item";
 import randomize from "./randomize";
 
 function App() {
@@ -38,36 +39,21 @@ function App() {
 
       <div className="pt-12 flex flex-row">
         <div className="h-32 w-32"></div>
-        <div className="h-32 w-32">
-          <img src={helm} alt="Helmet Armor" width="100%" height="100%" />
-        </div>
-        <div className="h-32 w-32">
-          <img src={cape} alt="Cape" width="100%" height="100%" />
-        </div>
+        <Item src={helm} />
+        <Item src={cape} />
       </div>
 
       <div className="flex flex-row">
-        <div className="h-32 w-32">
-          <img src={weapons} alt="Weapon" width="100%" height="100%" />
-        </div>
-        <div className="h-32 w-32">
-          <img src={chest} alt="Chest Armor" width="100%" height="100%" />
-        </div>
-        <div className="h-32 w-32">
-          <img
-            className={offhand == "" ? "opacity-70" : ""}
-            src={offhand == "" ? weapons : offhand}
-            alt="Offhand Weapon"
-            width="100%"
-            height="100%"
-          />
-        </div>
+        <Item src={weapons} />
+        <Item src={chest} />
+        <Item
+          src={offhand == "" ? weapons : offhand}
+          className={offhand == "" ? "opacity-70" : ""}
+        />
       </div>
       <div className="flex flex-row">
         <div className="h-32 w-32"></div>
-        <div className="h-32 w-32">
-          <img src={boots} alt="Boot Armor" width="100%" height="100%" />
-        </div>
+        <Item src={boots} />
         <div className="h-32 w-32"></div>
       </div>
 
