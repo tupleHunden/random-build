@@ -39,21 +39,22 @@ function App() {
 
       <div className="pt-12 flex flex-row">
         <div className="h-32 w-32"></div>
-        <Item src={helm} />
-        <Item src={cape} />
+        <Item src={helm} alt="Helmet Armor Slot" />
+        <Item src={cape} alt="Cape Armor Slot" />
       </div>
 
       <div className="flex flex-row">
-        <Item src={weapons} />
-        <Item src={chest} />
+        <Item src={weapons} alt="Weapon Slot" />
+        <Item src={chest} alt="Chest Armor Slot" />
         <Item
           src={offhand == "" ? weapons : offhand}
+          alt="Offhand Slot"
           className={offhand == "" ? "opacity-70" : ""}
         />
       </div>
       <div className="flex flex-row">
         <div className="h-32 w-32"></div>
-        <Item src={boots} />
+        <Item src={boots} alt="Boot Armor Slot" />
         <div className="h-32 w-32"></div>
       </div>
 
